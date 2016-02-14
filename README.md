@@ -5,6 +5,7 @@ IR code from multiple remote. Can be used to build arduino ir remote.
 Code for remotes:
 * AA59-00741A 
 * RM-SMR1
+* BBox remote (Bouygue Telecom BBox télécommande)
 
 Can be used with https://github.com/z3t0/Arduino-IRremote
 
