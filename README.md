@@ -1,4 +1,6 @@
-# IR Code 
+# IR Remote Code 
+
+IR code from multiple remote. Can be used to build arduino ir remote.
 
 Code for remotes:
 * AA59-00741A 
@@ -77,3 +79,32 @@ Can be used with https://github.com/z3t0/Arduino-IRremote
 | RM-SMR1     | Sony Chaine HiFi | backward       | SONY    | 20   | 0xCCB9C    | 
 | RM-SMR1     | Sony Chaine HiFi | track next     | SONY    | 20   | 0x8CB9C    | 
 | RM-SMR1     | Sony Chaine HiFi | track down     | SONY    | 20   | 0xCB9C     | 
+| bbox        | Bbox Remote      | mute           | NEC     | 32   | 0x16D6F00F | 
+| bbox        | Bbox Remote      | on/off         | NEC     | 32   | 0x16D648B7 | 
+| bbox        | Bbox Remote      | tv green       | NEC     | 32   | 0x16D62CD3 | 
+| bbox        | Bbox Remote      | 3 dots         | NEC     | 32   | 0x16D60CF3 | 
+| bbox        | Bbox Remote      | up             | NEC     | 32   | 0x16D6D02F | 
+| bbox        | Bbox Remote      | down           | NEC     | 32   | 0x16D630CF | 
+| bbox        | Bbox Remote      | left           | NEC     | 32   | 0x16D6D827 | 
+| bbox        | Bbox Remote      | right          | NEC     | 32   | 0x16D638C7 | 
+| bbox        | Bbox Remote      | ok             | NEC     | 32   | 0x16D6A857 | 
+| bbox        | Bbox Remote      | back           | NEC     | 32   | 0x16D650AF | 
+| bbox        | Bbox Remote      | home           | NEC     | 32   | 0x16D628D7 | 
+| bbox        | Bbox Remote      | play/pause     | NEC     | 32   | 0x16D6748B | 
+| bbox        | Bbox Remote      | program +      | NEC     | 32   | 0x16D608F7 | 
+| bbox        | Bbox Remote      | program -      | NEC     | 32   | 0x16D658A7 | 
+| bbox        | Bbox Remote      | volume +       | NEC     | 32   | 0x16D6B04F | 
+| bbox        | Bbox Remote      | volume -       | NEC     | 32   | 0x16D6708F | 
+| bbox        | Bbox Remote      | 1              | NEC     | 32   | 0x16D6807F | 
+| bbox        | Bbox Remote      | 2              | NEC     | 32   | 0x16D640BF | 
+| bbox        | Bbox Remote      | 3              | NEC     | 32   | 0x16D6C03F | 
+| bbox        | Bbox Remote      | 4              | NEC     | 32   | 0x16D620DF | 
+| bbox        | Bbox Remote      | 5              | NEC     | 32   | 0x16D6A05F | 
+| bbox        | Bbox Remote      | 6              | NEC     | 32   | 0x16D6609F | 
+| bbox        | Bbox Remote      | 7              | NEC     | 32   | 0x16D6E01F | 
+| bbox        | Bbox Remote      | 8              | NEC     | 32   | 0x16D610EF | 
+| bbox        | Bbox Remote      | 9              | NEC     | 32   | 0x16D6906F | 
+| bbox        | Bbox Remote      | 0              | NEC     | 32   | 0x16D600FF | 
+| bbox        | Bbox Remote      | record         | NEC     | 32   | 0x16D6847B | 
+| bbox        | Bbox Remote      | keyboard       | NEC     | 32   | 0x16D614EB | 
+
