@@ -1,3 +1,5 @@
+#include <MyTransportNRF24.h>
+#include <MyHwATMega328.h>
 #include <IRremote.h>
 #include <MySensor.h>
 #include <SPI.h>
@@ -11,7 +13,9 @@
 
 IRsend irsend;
 
-MySensor gw;
+MyTransportNRF24 radio(RF24_CE_PIN, RF24_CS_PIN, RF24_PA_LEVEL_GW);  
+MyHwATMega328 hw;
+MySensor gw(radio, hw);
 
 long tvArr[] = {
   0xE0E040BF,
@@ -60,6 +64,36 @@ long tvArr[] = {
   0xE0E06897
 };
 
+long arrBbox[] = {
+  0x16D6F00F,
+  0x16D648B7,
+  0x16D62CD3,
+  0x16D60CF3,
+  0x16D6D02F,
+  0x16D630CF,
+  0x16D6D827,
+  0x16D638C7,
+  0x16D6A857,
+  0x16D650AF,
+  0x16D628D7,
+  0x16D6748B,
+  0x16D608F7,
+  0x16D658A7,
+  0x16D6B04F,
+  0x16D6708F,
+  0x16D6807F,
+  0x16D640BF,
+  0x16D6C03F,
+  0x16D620DF,
+  0x16D6A05F,
+  0x16D6609F,
+  0x16D6E01F,
+  0x16D610EF,
+  0x16D6906F,
+  0x16D600FF,
+  0x16D6847B,
+  0x16D614EB,
+};
 
 void setup()
 {
@@ -78,10 +112,14 @@ void loop()
 void incomingMessage(const MyMessage &message) {
   if (message.sensor == CHILD_ID_TV) {
     Serial.println("TV press");
-    for (int i = 0; i < 3; i++) {
-      irsend.sendSAMSUNG(tvArr[message.getInt()], 32);
-      delay(40);
-    }
+    irsend.sendSAMSUNG(tvArr[message.getInt()], 32);
+    delay(40);
+  }
+
+  if (message.sensor == CHILD_ID_BBOX) {
+    Serial.println("bbox press");
+    irsend.sendNEC(arrBbox[message.getInt()], 32);
+    delay(40);
   }
 }
 
